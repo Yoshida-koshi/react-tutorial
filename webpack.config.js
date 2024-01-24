@@ -3,6 +3,13 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
+    devServer: {
+      static: {
+        directory: path.join(__dirname, 'src'),
+      },
+      compress: true,
+      port: 9000,
+    },
     context: path.join(__dirname, "src"),
     entry: "./js/client.js",
     module: {
